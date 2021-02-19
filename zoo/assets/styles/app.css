@@ -1,0 +1,12 @@
+body {
+    background-color: lightgray;
+}
+
+.carousel-caption {
+    top: 170px;
+}
+
+.carousel-control-prev,.carousel-control-next  {
+    background-color: #777777;
+    border-style: none;
+}

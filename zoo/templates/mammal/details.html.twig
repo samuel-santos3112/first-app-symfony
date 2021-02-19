@@ -1,0 +1,57 @@
+{% extends "base.html.twig" %}
+{% block title%}
+    Mamíferos
+{% endblock %}
+{% block body %}
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators" style="">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+
+            {% if animal == 'Veado' %}
+                <img src="https://picsum.photos/id/1003/1700/1772" width="100%" height="auto" style="max-height: 694px;">
+                <div class="container" >
+                    <div class="carousel-caption text-start" >
+                        <p style="font-size: 50px;"> <br>{{ animal }} </b><p>
+                        <p style="font-size: 20px;"><b>Os cervídeos, cervos ou ainda veados constituem uma família de animais ungulados artiodáctilos<br> e ruminantes, à qual pertencem animais como a corça, o alce e o caribu.<br> Os cervídeos estão geograficamente bem distribuídos por todos os continentes exceto Austrália e Antártida.</b></p>
+                        <p class="js-like-dislike">
+                            <span id="js-total-likes">0</span> <a href="#" class="btn btn-primary my-2" data-like="like"><i class="fa fa-thumbs-up"></i></a>
+                            {# <span id="js-total-dislikes">0</span> <a href="#" class="btn btn-secondary my-2" data-like="dislike"><i class="fa fa-thumbs-down"></i></a> #}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            {% elseif animal == 'Cachorro' %}
+                <img src="https://picsum.photos/id/237/1700/694" width="100%" height="auto" style="max-height: 694px;">
+                <div class="container" >
+                    <div class="carousel-caption text-start" >
+                        <p style="font-size: 50px;"> <br>{{ animal }} </b><p>
+                        <p style="font-size: 20px;">O cão, no Brasil também chamado de cachorro, é um mamífero carnívoro da família dos canídeos,<br> subespécie do lobo, e talvez o mais antigo animal domesticado pelo ser humano.<br> Teorias postulam que surgiu do lobo cinzento no continente asiático há mais de 100 000 anos.</p>
+                        <p>
+                           12 &nbsp; <a href="#" class="btn btn-primary my-2"><i class="fa fa-thumbs-up"></i></a>
+                           <br>
+                           1 &nbsp; &nbsp; <a href="#" class="btn btn-secondary my-2"><i class="fa fa-thumbs-down"></i></a>
+                        </p>
+                    </div>
+                </div>
+            {% elseif animal == 'Urso' %}
+                <img src="https://picsum.photos/id/1020/2000/2000" width="100%" height="auto" style="max-height: 694px;">
+                <div class="container" >
+                    <div class="carousel-caption text-start" >
+                        <p style="font-size: 50px;"> <br> {{ animal }} </b><p>
+                        <p style="font-size: 20px;"> <br>Os Ursos constituem uma família de mamíferos plantígrados, da ordem Carnivora, <br>geralmente de grande porte, contendo os ursos e os pandas.</b></p>
+                        <p>
+                           12 <a href="#" class="btn btn-primary my-2"><i class="fa fa-thumbs-up"></i></a>
+                           1 <a href="#" class="btn btn-secondary my-2"><i class="fa fa-thumbs-down"></i></a>
+                        </p>              
+                    </div>
+                </div>
+            {% endif %}
+
+        </div>
+      
+    </div>
+{% endblock %}
